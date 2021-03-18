@@ -1,0 +1,19 @@
+version: "3"
+services:
+  mysql:
+    # mysql:8 is now using sha2 as its default auth method; for this
+    # exercise I am going to use the last version that uses the navtive
+    # password method.
+    image: mysql:5.7.33
+    environment: 
+      MYSQL_HOST: localhost
+      MYSQL_DATABASE: whitebox
+      MYSQL_ROOT_PASSWORD: interstella
+    ports:
+      - "5555:3306"
+    expose:
+      - 5555
+    volumes: 
+      # Files in this directory will be executed on container startup
+      # in alphabetical order. 
+      - ./init:/docker-entrypoint-initdb.d

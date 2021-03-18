@@ -1,0 +1,18 @@
+{
+  "name": "whitebox",
+  "version": "1.0.0",
+  "description": "Code Challenge",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Robert Husak",
+  "license": "ISC",
+  "bin": {
+    "rates": "./cli.js"
+  },
+  "dependencies": {
+    "exceljs": "^4.2.1",
+    "meow": "^9.0.0",
+    "mysql": "^2.18.1"
+  }
+}
